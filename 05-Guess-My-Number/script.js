@@ -21,6 +21,7 @@ const displayMessage = function (message) {
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess);
+  document.querySelector('.guess').value = '';
 
   // When there is no input
   if (!guess) {
@@ -34,6 +35,7 @@ document.querySelector('.check').addEventListener('click', function () {
 
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
+    document.querySelector('.guess').value = secretNumber;
 
     if (score > highScore) {
       highScore = score;
@@ -85,4 +87,20 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.guess').value = '';
   secretNumber = Math.trunc(Math.random() * 20) + 1;
   document.querySelector('.score').textContent = score;
+});
+
+// When user press Enter key it check users guess
+document.getElementById('guess-id').addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    document.getElementById('btn-check').click();
+  }
+});
+
+// if user press Esc key, it's Again button
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    e.preventDefault();
+    document.getElementById('btn-again').click();
+  }
 });
