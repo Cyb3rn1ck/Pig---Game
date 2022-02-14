@@ -1,0 +1,60 @@
+@media (max-width: 50em) {
+  main {
+    width: 100rem;
+  }
+
+  .player--0,
+  .player--1 {
+    width: 10rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+
+  .btn--new {
+    top: 3rem;
+  }
+
+  .btn--roll {
+    top: 33rem;
+  }
+
+  .btn--hold {
+    top: 52rem;
+  }
+
+  .current-label {
+    font-size: 1.5rem;
+  }
+
+  .current-score {
+    font-size: 3rem;
+  }
+
+  .current {
+    width: 20rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .score {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 40em) {
+  .current {
+    width: 18rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .score {
+    font-size: 5rem;
+  }
+}
