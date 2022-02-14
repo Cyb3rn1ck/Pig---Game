@@ -97,7 +97,7 @@ document.getElementById('guess-id').addEventListener('keydown', function (e) {
   }
 });
 
-// if user press Esc key, it's Again button
+// When user press Esc key, it's Again button
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
     e.preventDefault();
